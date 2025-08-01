@@ -1,16 +1,16 @@
-## Memo-UNet: Leveraging Historical Information for Enhanced Significant Wave Height Prediction
+## SegSTA: A Segmented Prediction Strategy for Fine-Grained Spatiotemporal Prediction
 
 
-<div align="center"><img width="98%" src="memounet.svg" /></div>
+<div align="center"><img width="98%" src="segsta.svg" /></div>
 
 
 > 
 This repository contains the official PyTorch implementation of the following paper:
-> **Memo-UNet: Leveraging Historical Information for Enhanced Significant Wave Height Prediction**<br>
-> Teng Fang, Xiaojie Li, Canghong Shi, Xian Zhang, Wei Xiao, Yi Kou, Imran Mumtaz, Zhan ao Huang*<br>
+> **SegSTA: A Segmented Prediction Strategy for Fine-Grained Spatiotemporal Prediction**<br>
+> Teng Fang, Zhan ao Huang, Wei Xiao, Imran Mumtaz, Fan Yang, Xiaofei Wu, Xiaojie Li*, Jiliu Zhou, Xi Wu
 > Paper: <br>
 > 
-> **Abstract** *Wave height prediction is a typical spatiotemporal modeling task. It predicts future changes by modeling the spatiotemporal evolution pattern of historical information. UNet is one of the classical deep learning models that can effectively model the pattern of spatiotemporal evolution, and has received a lot of attention in the wave height prediction domain. However, there is a lack of utilization of historical information in UNet, and it is difficult to depict the time characteristics accurately. In this paper, we propose a Memo-UNet with an updatable Memo module and a TimeEncoding module for wave height prediction. Specifically, to address the issue of the lack of historical information, the updatable Memo module is used to enhance the dynamic evolution of key historical node information. Additionally, a TimeEncoding module and attention mechanisms are then incorporated to provide implicit temporal feature representations. We validated the proposed method with different marine regions for wave height prediction. The tested results showed that our method achieved an average 7.7\% improvement compared with the state-of-the-art prediction methods. In addition, we also tested the proposed method on classical spatiotemporal modeling tasks, and we obtained the highest performance across multiple metrics.*
+> **Abstract** *Accurate modeling of spatiotemporal dynamics is essential for reliable prediction. Existing methods predominantly learn patterns from tasks with limited complexity. This limitation becomes evident in complex tasks such as meteorological forecasting, where they possess more variables and longer prediction sequences, exhibiting higher prediction complexity and training costs. To address these challenges, we propose SegSTA (Segmented SpatioTemporal Attention network), a novel framework characterized by: the STA (SpatioTemporal Attention) module for adaptively capturing spatiotemporal dynamic dependencies; A segmented prediction strategy that divides long prediction sequences into multiple temporal segments for individual prediction, capable of reducing prediction complexity and training costs; A time-segment-weighted loss that adjusts error focus on different segments to reduce cumulative errors between segments. We evaluate our method on multiple datasets, with results showing an average improvement of approximately 10\% compared to the best methods. As a universal prediction strategy, the segmented prediction strategy generally enhances existing popular models, validating its potential for real-world applications.*
 
 ## Requirements
 - python 3
@@ -20,4 +20,4 @@ This repository contains the official PyTorch implementation of the following pa
 - netcdf4
 
 ## License
-All scripts and data are available with CC/BY/4.0 license.
+This project is released under the Apache 2.0 license. See LICENSE for more information.
